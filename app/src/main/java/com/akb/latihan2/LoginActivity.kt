@@ -5,6 +5,13 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.textview.MaterialTextView
 
+/**
+ * Tanggal Pengerjaan : 15/04/2023
+ * NIM : 10120908
+ * Nama : Rizka Ghinna Auliya
+ * Kelas : IF-10
+ * */
+
 class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
