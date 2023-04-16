@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/vToolbar"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="@dimen/_0dp"
+        android:background="@drawable/ic_header"
+        app:layout_constraintBottom_toBottomOf="@id/tvRegisterToolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvRegisterToolbar"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_header_back"
+        android:drawablePadding="@dimen/_16dp"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/_16dp"
+        android:paddingTop="@dimen/_12dp"
+        android:paddingEnd="@dimen/_16dp"
+        android:paddingBottom="@dimen/_12dp"
+        android:text="@string/register"
+        android:textAppearance="@style/TextAppearance.Roboto.Medium.Body1"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/svRegister"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvRegisterToolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/boxUsername"
+                style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_24dp"
+                android:layout_marginTop="@dimen/_16dp"
+                android:layout_marginEnd="@dimen/_24dp"
+                android:hint="@string/username"
+                app:boxBackgroundColor="@color/white"
+                app:boxStrokeColor="@color/black_default"
+                app:hintTextAppearance="@style/TextAppearance.Roboto.Regular.Body2"
+                app:hintTextColor="@color/black_default"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textAppearance="@style/TextAppearance.Roboto.Regular.Body2" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/boxEmail"
+                style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_24dp"
+                android:layout_marginTop="@dimen/_8dp"
+                android:layout_marginEnd="@dimen/_24dp"
+                android:hint="@string/email"
+                app:boxBackgroundColor="@color/white"
+                app:boxStrokeColor="@color/black_default"
+                app:hintTextAppearance="@style/TextAppearance.Roboto.Regular.Body2"
+                app:hintTextColor="@color/black_default"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/boxUsername">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:textAppearance="@style/TextAppearance.Roboto.Regular.Body2" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/boxPhoneNumber"
+                style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_24dp"
+                android:layout_marginTop="@dimen/_8dp"
+                android:layout_marginEnd="@dimen/_24dp"
+                android:hint="@string/phone_number"
+                app:boxBackgroundColor="@color/white"
+                app:boxStrokeColor="@color/black_default"
+                app:hintTextAppearance="@style/TextAppearance.Roboto.Regular.Body2"
+                app:hintTextColor="@color/black_default"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/boxEmail">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPhoneNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textAppearance="@style/TextAppearance.Roboto.Regular.Body2" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <RadioGroup
+                android:id="@+id/rgGender"
+                android:layout_width="@dimen/_0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_24dp"
+                android:layout_marginTop="@dimen/_8dp"
+                android:layout_marginEnd="@dimen/_24dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/boxPhoneNumber">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16dp"
+                    android:layout_marginEnd="@dimen/_48dp"
+                    android:buttonTint="@drawable/selector_radio_button"
+                    android:padding="@dimen/_16dp"
+                    android:text="@string/male"
+                    android:textAppearance="@style/TextAppearance.Roboto.Regular.Body2" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@drawable/selector_radio_button"
+                    android:padding="@dimen/_16dp"
+                    android:text="@string/female"
+                    android:textAppearance="@style/TextAppearance.Roboto.Regular.Body2" />
+
+            </RadioGroup>
+
+            <Spinner
+                android:id="@+id/spBloodType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_24dp"
+                android:layout_marginTop="@dimen/_8dp"
+                android:entries="@array/blood_type"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rgGender" />
+
+            <View
+                android:id="@+id/vBloodType"
+                android:layout_width="@dimen/_0dp"
+                android:layout_height="@dimen/_1dp"
+                android:layout_marginTop="@dimen/_4dp"
+                android:background="@color/silver"
+                app:layout_constraintEnd_toEndOf="@id/spBloodType"
+                app:layout_constraintStart_toStartOf="@id/spBloodType"
+                app:layout_constraintTop_toBottomOf="@id/spBloodType" />
+
+            <Spinner
+                android:id="@+id/spReshus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8dp"
+                android:layout_marginEnd="@dimen/_24dp"
+                android:entries="@array/reshus"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rgGender" />
+
+            <View
+                android:id="@+id/vReshus"
+                android:layout_width="@dimen/_0dp"
+                android:layout_height="@dimen/_1dp"
+                android:layout_marginTop="@dimen/_4dp"
+                android:background="@color/silver"
+                app:layout_constraintEnd_toEndOf="@id/spReshus"
+                app:layout_constraintStart_toStartOf="@id/spReshus"
+                app:layout_constraintTop_toBottomOf="@id/spReshus" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/boxPassword"
+                style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_24dp"
+                android:layout_marginTop="@dimen/_12dp"
+                android:layout_marginEnd="@dimen/_24dp"
+                android:hint="@string/password"
+                app:boxBackgroundColor="@color/white"
+                app:boxStrokeColor="@color/black_default"
+                app:hintTextAppearance="@style/TextAppearance.Roboto.Regular.Body2"
+                app:hintTextColor="@color/black_default"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/spReshus">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:textAppearance="@style/TextAppearance.Roboto.Regular.Body2" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/boxRetypePassword"
+                style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_24dp"
+                android:layout_marginTop="@dimen/_8dp"
+                android:layout_marginEnd="@dimen/_24dp"
+                android:hint="@string/retype_password"
+                app:boxBackgroundColor="@color/white"
+                app:boxStrokeColor="@color/black_default"
+                app:hintTextAppearance="@style/TextAppearance.Roboto.Regular.Body2"
+                app:hintTextColor="@color/black_default"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/boxPassword">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etRetypePassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:textAppearance="@style/TextAppearance.Roboto.Regular.Body2" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <RadioGroup
+                android:id="@+id/rgPersonal"
+                android:layout_width="@dimen/_0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_24dp"
+                android:layout_marginTop="@dimen/_8dp"
+                android:layout_marginEnd="@dimen/_24dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/boxRetypePassword">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16dp"
+                    android:layout_marginEnd="@dimen/_24dp"
+                    android:buttonTint="@drawable/selector_radio_button"
+                    android:padding="@dimen/_16dp"
+                    android:text="@string/personal"
+                    android:textAppearance="@style/TextAppearance.Roboto.Regular.Body2" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@drawable/selector_radio_button"
+                    android:padding="@dimen/_16dp"
+                    android:text="@string/organization"
+                    android:textAppearance="@style/TextAppearance.Roboto.Regular.Body2" />
+
+            </RadioGroup>
+
+            <Spinner
+                android:id="@+id/spJob"
+                android:layout_width="@dimen/_0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_24dp"
+                android:layout_marginTop="@dimen/_8dp"
+                android:layout_marginEnd="@dimen/_24dp"
+                android:entries="@array/job"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rgPersonal" />
+
+            <View
+                android:id="@+id/vJob"
+                android:layout_width="@dimen/_0dp"
+                android:layout_height="@dimen/_1dp"
+                android:layout_marginTop="@dimen/_4dp"
+                android:background="@color/silver"
+                app:layout_constraintEnd_toEndOf="@id/spJob"
+                app:layout_constraintStart_toStartOf="@id/spJob"
+                app:layout_constraintTop_toBottomOf="@id/spJob" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/boxAddress"
+                style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_24dp"
+                android:layout_marginTop="@dimen/_12dp"
+                android:layout_marginEnd="@dimen/_24dp"
+                android:hint="@string/home_address"
+                app:boxBackgroundColor="@color/white"
+                app:boxStrokeColor="@color/black_default"
+                app:hintTextAppearance="@style/TextAppearance.Roboto.Regular.Body2"
+                app:hintTextColor="@color/black_default"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/spJob">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:textAppearance="@style/TextAppearance.Roboto.Regular.Body2" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/boxLocation"
+                style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_24dp"
+                android:layout_marginTop="@dimen/_8dp"
+                android:layout_marginEnd="@dimen/_24dp"
+                android:hint="@string/default_location"
+                app:boxBackgroundColor="@color/white"
+                app:boxStrokeColor="@color/black_default"
+                app:endIconDrawable="@drawable/ic_blood_needed_location"
+                app:endIconMode="custom"
+                app:endIconTint="@color/silver"
+                app:hintTextAppearance="@style/TextAppearance.Roboto.Regular.Body2"
+                app:hintTextColor="@color/black_default"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/boxAddress">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textAppearance="@style/TextAppearance.Roboto.Regular.Body2" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <CheckBox
+                android:id="@+id/cbAgreement"
+                android:layout_width="@dimen/_16dp"
+                android:layout_height="@dimen/_16dp"
+                android:layout_marginStart="@dimen/_24dp"
+                android:layout_marginTop="@dimen/_24dp"
+                android:layout_marginEnd="@dimen/_24dp"
+                android:background="@drawable/selector_check_box"
+                android:button="@null"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/boxLocation" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvAgreement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16dp"
+                android:text="@string/agreement"
+                android:textAppearance="@style/TextAppearance.Roboto.Regular.Body2"
+                app:layout_constraintBottom_toBottomOf="@id/cbAgreement"
+                app:layout_constraintStart_toEndOf="@id/cbAgreement"
+                app:layout_constraintTop_toTopOf="@id/cbAgreement" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnRegister"
+                android:layout_width="@dimen/_0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16dp"
+                android:layout_marginTop="@dimen/_24dp"
+                android:layout_marginEnd="@dimen/_16dp"
+                android:layout_marginBottom="@dimen/_24dp"
+                android:backgroundTint="@color/white"
+                android:insetTop="@dimen/_0dp"
+                android:insetBottom="@dimen/_0dp"
+                android:text="@string/register"
+                android:textAllCaps="true"
+                android:textAppearance="@style/TextAppearance.Roboto.Medium.Body1"
+                android:textColor="@color/picton_blue"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cbAgreement"
+                app:strokeColor="@color/picton_blue"
+                app:strokeWidth="@dimen/_1dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
